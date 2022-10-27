@@ -19,6 +19,8 @@ function convertPokemonHtml (pokemon) {
   `
 }
 
+const pokemonOl = document.getElementById('pokemonList')
+
 fetch(URL)
   .then((response) => response.json())
   .then((jsonBody) => jsonBody.results)
@@ -26,7 +28,7 @@ fetch(URL)
 
     for (let i = 0; i < pokemonList.length; i++) {
       const pokemon = pokemonList[i];
-      console.log(convertPokemonHtml(pokemon));
+      pokemonOl.innerHTML += convertPokemonHtml(pokemon)
     }
 
   })
