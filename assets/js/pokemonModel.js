@@ -3,4 +3,6 @@ class Pokemon {
   number;
   type;
   types = [];
+  image;
 }
+
